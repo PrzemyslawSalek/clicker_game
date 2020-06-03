@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Lvl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://buldings/Policja.png" type="Texture" id=2]
+[ext_resource path="res://backgrounds/lublin.jpg" type="Texture" id=3]
+[ext_resource path="res://buldings/Polsat.png" type="Texture" id=4]
+[ext_resource path="res://buldings/Zabka.png" type="Texture" id=5]
+[ext_resource path="res://LvlBacground/Background1.gd" type="Script" id=6]
+
+[node name="Background1" instance=ExtResource( 1 )]
+script = ExtResource( 6 )
+
+[node name="MainBackground" parent="." index="0"]
+position = Vector2( 960, 540 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="S1" parent="." index="1"]
+position = Vector2( 987, 864 )
+scale = Vector2( 1.64029, 1.3962 )
+texture = ExtResource( 2 )
+
+[node name="S2" parent="." index="2"]
+position = Vector2( 1792, 497 )
+scale = Vector2( 0.234208, 0.285926 )
+texture = ExtResource( 5 )
+
+[node name="S3" parent="." index="3"]
+position = Vector2( 1768, 141 )
+scale = Vector2( 0.159, 0.159 )
+texture = ExtResource( 4 )
+
+[node name="S4" type="Sprite" parent="." index="4"]
+visible = false
+scale = Vector2( 1, 1 )
+
+[node name="Sprite" type="Sprite" parent="S4" index="0"]
+position = Vector2( 58.0037, 381 )
+scale = Vector2( 0.234208, 0.285926 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="S4" index="1"]
+position = Vector2( 65.222, 134.168 )
+rotation = -1.5951
+scale = Vector2( 0.285885, 0.234259 )
+texture = ExtResource( 5 )
+
+[node name="S5" type="Sprite" parent="." index="5"]
+visible = false
+scale = Vector2( 1, 1 )
+
+[node name="Sprite3" type="Sprite" parent="S5" index="0"]
+position = Vector2( 648.002, 100 )
+scale = Vector2( 0.0703685, 0.0853858 )
+texture = ExtResource( 5 )
+
+[node name="Sprite4" type="Sprite" parent="S5" index="1"]
+position = Vector2( 793.002, 163.999 )
+scale = Vector2( 0.0703685, 0.0853858 )
+texture = ExtResource( 5 )
+
+[node name="Sprite5" type="Sprite" parent="S5" index="2"]
+position = Vector2( 1034, 65.998 )
+scale = Vector2( 0.0703685, 0.0853858 )
+texture = ExtResource( 5 )
+
+[node name="Sprite6" type="Sprite" parent="S5" index="3"]
+position = Vector2( 1116, 232 )
+scale = Vector2( 0.0703685, 0.0853858 )
+texture = ExtResource( 5 )
+
+[node name="Sprite7" type="Sprite" parent="S5" index="4"]
+position = Vector2( 1255, 97.9988 )
+scale = Vector2( 0.0703685, 0.0853858 )
+texture = ExtResource( 5 )
+
+[node name="Sprite8" type="Sprite" parent="S5" index="5"]
+position = Vector2( 907.001, 343 )
+scale = Vector2( 0.0703685, 0.0853858 )
+texture = ExtResource( 5 )

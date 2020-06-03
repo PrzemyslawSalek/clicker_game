@@ -1,0 +1,145 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://buildigButton/BankPolskiButton.png" type="Texture" id=1]
+[ext_resource path="res://BuldingButtons.gd" type="Script" id=2]
+[ext_resource path="res://gui/SKLEP3.png" type="Texture" id=3]
+[ext_resource path="res://Buldiing.tscn" type="PackedScene" id=4]
+[ext_resource path="res://buildigButton/AptekaButton.png" type="Texture" id=5]
+[ext_resource path="res://buildigButton/LEgiaButton.png" type="Texture" id=6]
+[ext_resource path="res://buildigButton/MediaExpertButton.png" type="Texture" id=7]
+[ext_resource path="res://buildigButton/PolsatButton.png" type="Texture" id=8]
+[ext_resource path="res://buildigButton/MetroButton.png" type="Texture" id=9]
+[ext_resource path="res://buildigButton/ZabkaButton.png" type="Texture" id=10]
+[ext_resource path="res://buildigButton/PocztaButton.png" type="Texture" id=11]
+[ext_resource path="res://buildigButton/ZusButton.png" type="Texture" id=12]
+[ext_resource path="res://buildigButton/BiedronkaButton.png" type="Texture" id=13]
+[ext_resource path="res://buildigButton/PolicjaButton.png" type="Texture" id=14]
+[ext_resource path="res://buildigButton/MleczarniaButton.png" type="Texture" id=15]
+[ext_resource path="res://buildigButton/DrewnoButton.png" type="Texture" id=16]
+[ext_resource path="res://buildigButton/PanPawelButton.png" type="Texture" id=17]
+
+[node name="Buldings" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -168, 408 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Store" type="ScrollContainer" parent="."]
+anchor_right = 0.323
+margin_left = 44.0
+margin_top = 1.0
+margin_right = 2749.0
+margin_bottom = 4531.0
+rect_scale = Vector2( 0.2, 0.2 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuldingButtons" type="VBoxContainer" parent="Store"]
+margin_right = 800.0
+margin_bottom = 12500.0
+rect_pivot_offset = Vector2( 0, 1000 )
+custom_constants/separation = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Zabka" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 1 )
+texture_normal = ExtResource( 10 )
+state = 3
+price = 1
+money_per_sek = 10
+lvl = 1
+
+[node name="Policja" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 1 )
+margin_top = 900.0
+margin_bottom = 1700.0
+texture_normal = ExtResource( 14 )
+money_per_sek = 6
+lvl = 1
+
+[node name="Polsat" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 1 )
+margin_top = 1800.0
+margin_bottom = 2600.0
+texture_normal = ExtResource( 8 )
+money_per_sek = 20
+soundPath = "res://sound/buldings/PolsatReklama.wav"
+lvl = 1
+
+[node name="BankPolski" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 2700.0
+margin_bottom = 3500.0
+texture_normal = ExtResource( 1 )
+soundPath = "res://sound/buldings/PKOBankPolski.wav"
+lvl = 2
+
+[node name="Metro" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 3600.0
+margin_bottom = 4400.0
+texture_normal = ExtResource( 9 )
+lvl = 2
+
+[node name="Legia" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 4500.0
+margin_bottom = 5300.0
+texture_normal = ExtResource( 6 )
+soundPath = "res://sound/buldings/legia.wav"
+lvl = 2
+
+[node name="Biedronka" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 5400.0
+margin_bottom = 6200.0
+texture_normal = ExtResource( 13 )
+soundPath = "res://sound/buldings/Biedronka.wav"
+lvl = 3
+
+[node name="ZUS" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 6300.0
+margin_bottom = 7100.0
+texture_normal = ExtResource( 12 )
+lvl = 3
+
+[node name="Mleczarnia" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 7200.0
+margin_bottom = 8000.0
+texture_normal = ExtResource( 15 )
+lvl = 3
+
+[node name="PanPawel" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 8100.0
+margin_bottom = 8900.0
+texture_normal = ExtResource( 17 )
+lvl = 4
+
+[node name="Pila" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 9000.0
+margin_bottom = 9800.0
+texture_normal = ExtResource( 16 )
+soundPath = "res://sound/buldings/pila.wav"
+lvl = 4
+
+[node name="MediaExpert" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 9900.0
+margin_bottom = 10700.0
+texture_normal = ExtResource( 7 )
+lvl = 4
+
+[node name="Poczta" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 10800.0
+margin_bottom = 11600.0
+texture_normal = ExtResource( 11 )
+lvl = 4
+
+[node name="Apteka" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+margin_top = 11700.0
+margin_bottom = 12500.0
+texture_normal = ExtResource( 5 )
+lvl = 4

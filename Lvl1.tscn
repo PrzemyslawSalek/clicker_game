@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Lvl1.gd" type="Script" id=1]
+[ext_resource path="res://backgrounds/background1.jpg" type="Texture" id=2]
+[ext_resource path="res://Panel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://LvlBacground/Background2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://LvlBacground/Background3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MainClick.tscn" type="PackedScene" id=6]
+[ext_resource path="res://LvlBacground/Background1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://LvlBacground/Background4.tscn" type="PackedScene" id=8]
+
+[node name="Lvl1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="MainClick2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 240, 400 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2( 856, 608 )
+scale = Vector2( 1.3375, 1.31111 )
+texture = ExtResource( 2 )
+
+[node name="Money" parent="." instance=ExtResource( 3 )]
+
+[node name="Levels" type="Node2D" parent="."]
+show_behind_parent = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background1" parent="Levels" instance=ExtResource( 7 )]
+visible = false
+
+[node name="Background2" parent="Levels" instance=ExtResource( 4 )]
+visible = false
+
+[node name="Background4" parent="Levels" instance=ExtResource( 8 )]
+visible = false
+
+[node name="Background3" parent="Levels" instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 0, 240.896 )
+scale = Vector2( 0.793881, 0.777924 )
+[connection signal="main_click" from="MainClick2" to="." method="_on_MainClick2_main_click"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

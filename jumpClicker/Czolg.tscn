@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://jumpClicker/JumpClicker.tscn" type="PackedScene" id=1]
+[ext_resource path="res://backgrounds/czolg.png" type="Texture" id=2]
+[ext_resource path="res://jumpClicker/Czolg.gd" type="Script" id=3]
+
+[node name="Czolg" instance=ExtResource( 1 )]
+position = Vector2( 1742.01, 836.69 )
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+position = Vector2( 0, 72 )
+
+[node name="TextureProgress" parent="." index="3"]
+margin_left = -360.0
+margin_top = -216.0
+margin_right = 369.0
+margin_bottom = -70.0
+rect_scale = Vector2( 1, 0.387 )
+
+[node name="VisibilityNotifier2D" parent="." index="4"]
+position = Vector2( 0, 72 )
+scale = Vector2( 25.8467, 7.41696 )

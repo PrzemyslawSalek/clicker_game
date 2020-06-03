@@ -1,0 +1,249 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Panel.gd" type="Script" id=1]
+[ext_resource path="res://gui/ZlotyButton.png" type="Texture" id=2]
+[ext_resource path="res://gui/MapaButton.png" type="Texture" id=3]
+[ext_resource path="res://sound/MUZYKAWTLE.wav" type="AudioStream" id=4]
+[ext_resource path="res://gui/sound_icon1.png" type="Texture" id=7]
+[ext_resource path="res://gui/Piedra-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://gui/PromileButton.png" type="Texture" id=10]
+[ext_resource path="res://sound/gui/click1.wav" type="AudioStream" id=11]
+[ext_resource path="res://gui/fullScreenMax.png" type="Texture" id=12]
+[ext_resource path="res://gui/TŁO3.png" type="Texture" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 3
+extra_spacing_char = 3
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 227
+outline_size = 14
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 10
+extra_spacing_char = -1
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[node name="Panel" type="Panel"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = 10.475
+
+[node name="Money" type="Label" parent="."]
+margin_left = 37.0
+margin_top = 20.0
+margin_right = 272.0
+margin_bottom = 74.0
+rect_pivot_offset = Vector2( -27.679, -8.795 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0 zloty"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Promil" type="Label" parent="."]
+margin_left = 733.0
+margin_top = 18.1925
+margin_right = 968.0
+margin_bottom = 72.1925
+rect_pivot_offset = Vector2( -27.679, -8.795 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0 %"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PromilPerClk" type="Label" parent="."]
+margin_left = 1053.0
+margin_top = 20.0
+margin_right = 1305.0
+margin_bottom = 69.0
+rect_pivot_offset = Vector2( -27.679, -8.795 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "1 %/klik"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyPerSecond" type="Label" parent="."]
+margin_left = 371.0
+margin_top = 23.0
+margin_right = 624.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( -27.679, -8.795 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "1 zl/sek"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 1760.0
+margin_top = 3.0
+margin_right = 1916.0
+margin_bottom = 93.0
+text = "EXIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mute" type="Button" parent="."]
+margin_left = 1650.03
+margin_top = 18.1925
+margin_right = 1924.03
+margin_bottom = 246.193
+rect_scale = Vector2( 0.2, 0.2 )
+custom_styles/focus = SubResource( 2 )
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Store" type="Button" parent="."]
+margin_left = 1771.0
+margin_top = 196.382
+margin_right = 2583.0
+margin_bottom = 1002.38
+rect_scale = Vector2( 0.15, 0.15 )
+custom_styles/focus = SubResource( 3 )
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StoreText" type="Label" parent="Store"]
+margin_left = -74.7793
+margin_top = 806.0
+margin_right = 1008.22
+margin_bottom = 1150.0
+custom_fonts/font = SubResource( 4 )
+text = "POSTACIE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buldings2" type="Button" parent="."]
+margin_left = 1771.0
+margin_top = 408.095
+margin_right = 2583.0
+margin_bottom = 1214.1
+rect_scale = Vector2( 0.148615, 0.149051 )
+custom_styles/focus = SubResource( 3 )
+icon = ExtResource( 10 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StoreText" type="Label" parent="Buldings2"]
+margin_left = -74.7793
+margin_top = 806.0
+margin_right = 1008.22
+margin_bottom = 1150.0
+rect_scale = Vector2( 1.10532, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "BUDYNKI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextLvl" type="Button" parent="."]
+margin_left = 1771.0
+margin_top = 614.0
+margin_right = 2583.0
+margin_bottom = 1420.01
+rect_scale = Vector2( 0.148615, 0.149051 )
+custom_styles/focus = SubResource( 3 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StoreText" type="Label" parent="NextLvl"]
+margin_left = -154.764
+margin_top = 806.005
+margin_right = 928.236
+margin_bottom = 1421.01
+rect_scale = Vector2( 1.10532, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "KOLEJNY
+POZIOM"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullScreen" type="Button" parent="."]
+margin_left = 1563.65
+margin_top = 18.1925
+margin_right = 1682.65
+margin_bottom = 137.193
+rect_scale = Vector2( 0.4, 0.4 )
+custom_styles/focus = SubResource( 5 )
+icon = ExtResource( 12 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundTrack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+autoplay = true
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Mute" to="." method="_on_Mute_pressed"]
+[connection signal="mouse_entered" from="Store" to="." method="_on_Store_mouse_entered"]
+[connection signal="mouse_exited" from="Store" to="." method="_on_Store_mouse_exited"]
+[connection signal="pressed" from="Store" to="." method="_on_Store_pressed"]
+[connection signal="mouse_entered" from="Buldings2" to="." method="_on_Buldings2_mouse_entered"]
+[connection signal="mouse_exited" from="Buldings2" to="." method="_on_Buldings2_mouse_exited"]
+[connection signal="pressed" from="Buldings2" to="." method="_on_Buldings2_pressed"]
+[connection signal="mouse_entered" from="NextLvl" to="." method="_on_NextLvl_mouse_entered"]
+[connection signal="mouse_exited" from="NextLvl" to="." method="_on_NextLvl_mouse_exited"]
+[connection signal="pressed" from="NextLvl" to="." method="_on_NextLvl_pressed"]
+[connection signal="pressed" from="FullScreen" to="." method="_on_FullScreen_pressed"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lvl.gd" type="Script" id=5]
+
+[node name="Lvl" type="Node2D"]
+show_behind_parent = true
+position = Vector2( 0, 128 )
+scale = Vector2( 0.891, 0.882 )
+script = ExtResource( 5 )
+
+[node name="MainBackground" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 959, 540 )
+scale = Vector2( 1.50156, 1.5 )
+
+[node name="S1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 160.953, 803 )
+scale = Vector2( 0.409151, 0.438901 )
+
+[node name="S2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1650, 895 )
+scale = Vector2( 0.523973, 0.604167 )
+
+[node name="S3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 431, 948 )

@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Character.gd" type="Script" id=1]
+[ext_resource path="res://gui/Piedra-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://character/tabliczka.png" type="Texture" id=3]
+[ext_resource path="res://storeButton/NosaczButton.png" type="Texture" id=4]
+[ext_resource path="res://sound/gui/click1.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 220
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = -5
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 128
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = -2
+font_data = ExtResource( 2 )
+
+[node name="Character" type="TextureButton"]
+margin_right = 800.0
+margin_bottom = 800.0
+texture_normal = ExtResource( 4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 800.0
+margin_top = 464.062
+margin_right = 1391.0
+margin_bottom = 752.062
+custom_fonts/font = SubResource( 1 )
+text = "KOSZT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 821.0
+margin_top = 125.0
+margin_right = 1540.0
+margin_bottom = 349.0
+custom_fonts/font = SubResource( 2 )
+text = "ZWYCEZCA"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 1180.73, 238.009 )
+scale = Vector2( 1.94938, 1.19005 )
+texture = ExtResource( 3 )
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+[connection signal="mouse_entered" from="." to="." method="_on_Character_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Character_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_Character_pressed"]

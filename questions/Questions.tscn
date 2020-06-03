@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://gui/Piedra-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://backgrounds/question_bacground.png" type="Texture" id=2]
+[ext_resource path="res://questions/Questions.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+outline_size = 9
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[node name="Questions" type="Node2D"]
+position = Vector2( 340.134, 222.382 )
+scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 3 )
+
+[node name="Container" type="Container" parent="."]
+margin_left = -480.0
+margin_top = -147.0
+margin_right = -430.0
+margin_bottom = -96.0
+rect_scale = Vector2( 48.0431, 26.9779 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 119.809
+margin_top = 196.597
+margin_right = 1341.81
+margin_bottom = 564.597
+custom_fonts/font = SubResource( 1 )
+text = "CZY JESTES GLUPI?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 960, 544 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 199.519
+margin_top = 569.08
+margin_right = 580.519
+margin_bottom = 975.076
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+text = "TAK"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 983.905
+margin_top = 569.08
+margin_right = 1364.91
+margin_bottom = 975.076
+custom_styles/focus = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
+text = "NIE"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="Button2" to="." method="_on_Button2_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="." method="_on_Button2_mouse_exited"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

@@ -1,0 +1,111 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://storeButton/CzesioButton.png" type="Texture" id=1]
+[ext_resource path="res://Store.gd" type="Script" id=2]
+[ext_resource path="res://gui/SKLEP3.png" type="Texture" id=3]
+[ext_resource path="res://Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://storeButton/WesolykostekButton.png" type="Texture" id=5]
+[ext_resource path="res://storeButton/ZbigniewStonogaButton.png" type="Texture" id=6]
+[ext_resource path="res://storeButton/WieslawWszywka.png" type="Texture" id=7]
+[ext_resource path="res://storeButton/ZwyciezcaButton.png" type="Texture" id=8]
+[ext_resource path="res://storeButton/KlocuchButton.png" type="Texture" id=9]
+[ext_resource path="res://storeButton/PudzianButton.png" type="Texture" id=10]
+[ext_resource path="res://storeButton/MartaLinkiewiczButton.png" type="Texture" id=11]
+
+[node name="Characters" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+use_parent_material = true
+position = Vector2( -168, 408 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Store" type="ScrollContainer" parent="."]
+anchor_right = 0.406
+margin_left = 44.0
+margin_right = 2753.0
+margin_bottom = 4535.0
+rect_scale = Vector2( 0.2, 0.2 )
+scroll_horizontal_enabled = false
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Store"]
+margin_right = 800.0
+margin_bottom = 8000.0
+rect_pivot_offset = Vector2( 0, 1000 )
+custom_constants/separation = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Czesio" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+texture_normal = ExtResource( 1 )
+path = "res://character/CzesioClicker.png"
+soundPath = "res://sound/characterbutton/czesio2.wav"
+
+[node name="Nosacz" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 900.0
+margin_bottom = 1700.0
+price = 14
+path = "res://character/NosaczClicker.png"
+promil_per_clk = 9
+
+[node name="Wieslaw" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 1800.0
+margin_bottom = 2600.0
+texture_normal = ExtResource( 7 )
+path = "res://character/WieslawWszywka.png"
+
+[node name="Stonoga" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 2700.0
+margin_bottom = 3500.0
+texture_normal = ExtResource( 6 )
+path = "res://character/StonogaClicker.png"
+soundPath = "res://sound/characterbutton/StonogaToJestDramat.wav"
+
+[node name="Klocuch" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 3600.0
+margin_bottom = 4400.0
+texture_normal = ExtResource( 9 )
+path = "res://character/KlocuchClicker.png"
+
+[node name="Zwyciezca" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 4500.0
+margin_bottom = 5300.0
+texture_normal = ExtResource( 8 )
+price = 6
+path = "res://character/ZwyciezcaClicker.png"
+promil_per_clk = 19
+soundPath = "res://sound/characterbutton/Zwyciezca.wav"
+
+[node name="Pudzian" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 5400.0
+margin_bottom = 6200.0
+texture_normal = ExtResource( 10 )
+state = 2
+czy_drozeje = 1
+price = 6
+path = "res://character/Pudzian.png"
+promil_per_clk = 19
+soundPath = "res://sound/characterbutton/Pudzian.wav"
+
+[node name="Kostek" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 6300.0
+margin_bottom = 7100.0
+texture_normal = ExtResource( 5 )
+price = 6
+path = "res://character/Wesoy_kostekClicker.png"
+promil_per_clk = 19
+
+[node name="Linkiewicz" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 7200.0
+margin_bottom = 8000.0
+texture_normal = ExtResource( 11 )
+price = 6
+path = "res://character/MartaLinkiewiczClicker.png"
+promil_per_clk = 19

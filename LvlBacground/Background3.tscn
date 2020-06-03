@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Lvl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://backgrounds/rososz1.jpg" type="Texture" id=2]
+[ext_resource path="res://LvlBacground/Background3.gd" type="Script" id=3]
+[ext_resource path="res://backgrounds/drzewo_rososz.png" type="Texture" id=4]
+[ext_resource path="res://buldings/PanPaweł.png" type="Texture" id=5]
+[ext_resource path="res://LvlBacground/TreeFromRososz.gd" type="Script" id=6]
+[ext_resource path="res://backgrounds/pol_pl_HECHT-947-PILA-PILARKA-PRZECINARKA-SPALINOWA-LANCUCHOWA-DO-DREWNA-WALBRO-1877_4.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 76.3186, 232.426 )
+
+[node name="Backgroud3" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="MainBackground" parent="." index="0"]
+position = Vector2( 1077.44, 467.438 )
+scale = Vector2( 4.20875, 3.60331 )
+texture = ExtResource( 2 )
+
+[node name="S1" parent="." index="1"]
+position = Vector2( 1754.21, 791.383 )
+scale = Vector2( 0.955964, 1.13692 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="TreeFromRososz" type="Area2D" parent="." index="2"]
+script = ExtResource( 6 )
+
+[node name="S2" type="Sprite" parent="TreeFromRososz" index="0"]
+position = Vector2( 1149.27, 608.844 )
+scale = Vector2( 1.12413, 1.46312 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeFromRososz" index="1"]
+position = Vector2( 1151.52, 821.995 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="4"]
+visible = false
+position = Vector2( 1296.3, 935.374 )
+scale = Vector2( 0.783965, 0.792909 )
+texture = ExtResource( 7 )
+flip_h = true
