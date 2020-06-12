@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://jumpClicker/JumpClicker.tscn" type="PackedScene" id=1]
+[ext_resource path="res://backgrounds/gosciu_babke_zapina.png" type="Texture" id=2]
+[ext_resource path="res://sound/jumpclicker/gosciu_tam_babke_zapina.wav" type="AudioStream" id=3]
+
+[node name="NaDachu" instance=ExtResource( 1 )]
+position = Vector2( 264, 392 )
+scale = Vector2( 0.191, 0.228 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 0, -16 )
+scale = Vector2( 0.64, 0.62 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, -16 )
+
+[node name="TextureProgress" parent="." index="2"]
+margin_left = -136.0
+margin_right = 593.0
+rect_scale = Vector2( 0.384, 0.233 )
+
+[node name="AudioStreamPlayer2D2" parent="." index="4"]
+stream = ExtResource( 3 )

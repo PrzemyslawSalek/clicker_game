@@ -55,6 +55,7 @@ texture_normal = ExtResource( 10 )
 state = 3
 price = 1
 money_per_sek = 10
+soundPath = "res://sound/buldings/zabka.wav"
 lvl = 1
 
 [node name="Policja" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
@@ -63,6 +64,7 @@ margin_top = 900.0
 margin_bottom = 1700.0
 texture_normal = ExtResource( 14 )
 money_per_sek = 6
+soundPath = "res://sound/buldings/policja.wav"
 lvl = 1
 
 [node name="Polsat" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
@@ -85,6 +87,7 @@ lvl = 2
 margin_top = 3600.0
 margin_bottom = 4400.0
 texture_normal = ExtResource( 9 )
+soundPath = "res://sound/buldings/metro.wav"
 lvl = 2
 
 [node name="Legia" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
@@ -105,18 +108,21 @@ lvl = 3
 margin_top = 6300.0
 margin_bottom = 7100.0
 texture_normal = ExtResource( 12 )
+soundPath = "res://sound/buldings/zus.wav"
 lvl = 3
 
 [node name="Mleczarnia" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
 margin_top = 7200.0
 margin_bottom = 8000.0
 texture_normal = ExtResource( 15 )
+soundPath = "res://sound/buldings/0s_to_8s_Ser_Rycki_KONESER_billboard_sponsorski_.wav"
 lvl = 3
 
 [node name="PanPawel" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
 margin_top = 8100.0
 margin_bottom = 8900.0
 texture_normal = ExtResource( 17 )
+soundPath = "res://sound/buldings/PanPawe.wav"
 lvl = 4
 
 [node name="Pila" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
@@ -130,16 +136,19 @@ lvl = 4
 margin_top = 9900.0
 margin_bottom = 10700.0
 texture_normal = ExtResource( 7 )
-lvl = 4
+soundPath = "res://sound/buldings/MediaExpert.wav"
+lvl = 5
 
 [node name="Poczta" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
 margin_top = 10800.0
 margin_bottom = 11600.0
 texture_normal = ExtResource( 11 )
-lvl = 4
+soundPath = "res://sound/buldings/poczta.wav"
+lvl = 5
 
-[node name="Apteka" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
+[node name="SluzbaZdrowia" parent="Store/BuldingButtons" instance=ExtResource( 4 )]
 margin_top = 11700.0
 margin_bottom = 12500.0
 texture_normal = ExtResource( 5 )
-lvl = 4
+soundPath = "res://sound/buldings/szpital.wav"
+lvl = 5

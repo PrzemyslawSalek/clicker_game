@@ -62,7 +62,6 @@ texture = ExtResource( 3 )
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
-volume_db = -21.84
 [connection signal="mouse_entered" from="." to="." method="_on_Character_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Character_mouse_exited"]
 [connection signal="pressed" from="." to="." method="_on_Character_pressed"]

@@ -29,7 +29,7 @@ func _on_Character_pressed():
 			panel.subMoney(price)
 			panel.setMoneyPerSecond(money_per_sek)
 			panel.get_parent().showBulding(name)
-			if !state:
+			if state==0:
 				modulate=Color8(255,0,0,255)
 
 

@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://gui/Piedra-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://backgrounds/question_bacground.png" type="Texture" id=2]
 [ext_resource path="res://questions/Questions.gd" type="Script" id=3]
+[ext_resource path="res://sound/questions/VCLdoNiebieskich.wav" type="AudioStream" id=4]
+[ext_resource path="res://sound/questions/wiecejnizjednozwierze.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 128
@@ -27,10 +29,10 @@ scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 3 )
 
 [node name="Container" type="Container" parent="."]
-margin_left = -480.0
-margin_top = -147.0
-margin_right = -430.0
-margin_bottom = -96.0
+margin_left = -485.906
+margin_top = -146.26
+margin_right = -435.906
+margin_bottom = -95.26
 rect_scale = Vector2( 48.0431, 26.9779 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -82,6 +84,14 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Nie" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Tak" type="AudioStreamPlayer2D" parent="."]
+
+[node name="ready" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
 [connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

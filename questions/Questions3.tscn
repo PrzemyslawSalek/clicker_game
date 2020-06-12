@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://questions/Questions.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sound/questions/LIWKO.wav" type="AudioStream" id=2]
+[ext_resource path="res://sound/questions/ORZESZTYCHUJU.wav" type="AudioStream" id=3]
 
 [node name="Questions3" instance=ExtResource( 1 )]
 
@@ -8,7 +10,22 @@
 text = "Jak sie pan nazywa?"
 
 [node name="Button" parent="." index="3"]
-text = "Livko"
+margin_left = 199.809
+margin_top = 564.597
+margin_right = 580.809
+margin_bottom = 970.593
+text = "Liwko"
 
 [node name="Button2" parent="." index="4"]
-text = "Button"
+text = "Baton"
+
+[node name="Nie" parent="." index="5"]
+stream = ExtResource( 3 )
+volume_db = 12.0
+
+[node name="Tak" parent="." index="6"]
+stream = ExtResource( 2 )
+volume_db = 12.0
+
+[node name="ready" parent="." index="7"]
+stream = null

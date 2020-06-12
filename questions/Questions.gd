@@ -1,7 +1,13 @@
 extends Node2D
 
+var c=false
+
 func _ready():
-	pass # Replace with function body.
+	$ready.play()
+	
+func _physics_process(delta):
+	if !($Tak.playing || $Nie.playing) && c:
+		queue_free()
 
 
 func _on_Button_mouse_entered():
@@ -13,7 +19,9 @@ func _on_Button_mouse_exited():
 
 
 func _on_Button_pressed():
-	queue_free()
+	$Tak.play()
+	position.y-=1000
+	c=true
 
 
 func _on_Button2_mouse_entered():
@@ -25,4 +33,7 @@ func _on_Button2_mouse_exited():
 
 
 func _on_Button2_pressed():
-	queue_free()
+	position.y-=1000
+	$Nie.play()
+	c=true
+	

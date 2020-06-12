@@ -16,23 +16,25 @@ func _ready():
 
 
 func _on_Character_pressed():
-	print(state)
-	if panel.promil>=price && state:
+	print("state"+str(state))
+	if panel.promil>=price && state>0:
 		panel.soundPlay(soundPath)
 		state-=1
 		if czy_drozeje:
 			price+=panel.promil
-		$Label.text="KOSZT: " + str(price) + " zl"
+			$Label.text="KOSZT: " + str(price) + " zl"
 	
-	if(panel.promil>=price && !state):
+	if (panel.promil>=price) && !state:
+		state-=1
 		panel.remove_child(panel.store)
 		panel.get_node("Store").icon=load(panel.StoreIcon[0])
 		panel.store_is_activ=0
 		panel.subPromil(price)
 		panel.setPromilPerClick(promil_per_clk)
 		panel.get_parent().change_character(path)
-		if !state:#tylko pudzian
-			modulate=Color8(255,0,0,255)
+		#if !state:#tylko pudzian
+		modulate=Color8(255,0,0,255)
+	print("state1"+str(state))
 
 
 func _on_Character_mouse_entered():

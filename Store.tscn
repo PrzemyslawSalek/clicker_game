@@ -36,7 +36,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Store"]
 margin_right = 800.0
-margin_bottom = 8000.0
+margin_bottom = 7100.0
 rect_pivot_offset = Vector2( 0, 1000 )
 custom_constants/separation = 100
 __meta__ = {
@@ -48,35 +48,30 @@ texture_normal = ExtResource( 1 )
 path = "res://character/CzesioClicker.png"
 soundPath = "res://sound/characterbutton/czesio2.wav"
 
-[node name="Nosacz" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
+[node name="Wieslaw" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
 margin_top = 900.0
 margin_bottom = 1700.0
-price = 14
-path = "res://character/NosaczClicker.png"
-promil_per_clk = 9
-
-[node name="Wieslaw" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 1800.0
-margin_bottom = 2600.0
 texture_normal = ExtResource( 7 )
 path = "res://character/WieslawWszywka.png"
+soundPath = "res://sound/characterbutton/wszywka.wav"
 
 [node name="Stonoga" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 2700.0
-margin_bottom = 3500.0
+margin_top = 1800.0
+margin_bottom = 2600.0
 texture_normal = ExtResource( 6 )
 path = "res://character/StonogaClicker.png"
 soundPath = "res://sound/characterbutton/StonogaToJestDramat.wav"
 
 [node name="Klocuch" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 3600.0
-margin_bottom = 4400.0
+margin_top = 2700.0
+margin_bottom = 3500.0
 texture_normal = ExtResource( 9 )
 path = "res://character/KlocuchClicker.png"
+soundPath = "res://sound/characterbutton/KlocuchCoZaDzban.wav"
 
 [node name="Zwyciezca" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 4500.0
-margin_bottom = 5300.0
+margin_top = 3600.0
+margin_bottom = 4400.0
 texture_normal = ExtResource( 8 )
 price = 6
 path = "res://character/ZwyciezcaClicker.png"
@@ -84,8 +79,8 @@ promil_per_clk = 19
 soundPath = "res://sound/characterbutton/Zwyciezca.wav"
 
 [node name="Pudzian" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 5400.0
-margin_bottom = 6200.0
+margin_top = 4500.0
+margin_bottom = 5300.0
 texture_normal = ExtResource( 10 )
 state = 2
 czy_drozeje = 1
@@ -95,17 +90,19 @@ promil_per_clk = 19
 soundPath = "res://sound/characterbutton/Pudzian.wav"
 
 [node name="Kostek" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 6300.0
-margin_bottom = 7100.0
+margin_top = 5400.0
+margin_bottom = 6200.0
 texture_normal = ExtResource( 5 )
 price = 6
 path = "res://character/Wesoy_kostekClicker.png"
 promil_per_clk = 19
+soundPath = "res://sound/characterbutton/WesolyKostek.wav"
 
 [node name="Linkiewicz" parent="Store/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 7200.0
-margin_bottom = 8000.0
+margin_top = 6300.0
+margin_bottom = 7100.0
 texture_normal = ExtResource( 11 )
 price = 6
 path = "res://character/MartaLinkiewiczClicker.png"
 promil_per_clk = 19
+soundPath = "res://sound/characterbutton/Linkiewicz.wav"

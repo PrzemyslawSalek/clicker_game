@@ -23,7 +23,7 @@ var money_per_second=1
 var promil=0
 var promil_per_click=1
 
-var lvl_price = [1,1,1,10]
+var lvl_price = [1,1,1,10,2,9]
 
 func hideAll():
 	if store_is_activ:
@@ -88,7 +88,7 @@ func _on_Mute_pressed():
 	if sound:
 		$SoundTrack.volume_db=-80
 	else:
-		$SoundTrack.volume_db=-20
+		$SoundTrack.volume_db=-30
 
 
 

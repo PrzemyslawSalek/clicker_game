@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gosciu_tam_babke_zapina.wav-a716277c952b7f9d0c45af2f2c9e8bef.sample"
+
+[deps]
+
+source_file="res://sound/jumpclicker/gosciu_tam_babke_zapina.wav"
+dest_files=[ "res://.import/gosciu_tam_babke_zapina.wav-a716277c952b7f9d0c45af2f2c9e8bef.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

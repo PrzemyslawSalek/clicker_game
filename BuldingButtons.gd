@@ -9,6 +9,6 @@ func set_button(lvl):
 	print(lvl)
 	for x in children_arr:
 		if x.lvl == lvl:
-			print(x.name)
+			print("ustawiam"+x.name)
 			x.set_modulate(Color("ffffff"))
 		

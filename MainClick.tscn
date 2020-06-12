@@ -1,20 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://character/CzesioClicker.png" type="Texture" id=1]
-[ext_resource path="res://gui/Piedra-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://character/tabliczka.png" type="Texture" id=3]
+[ext_resource path="res://character/NosaczClicker.png" type="Texture" id=1]
 [ext_resource path="res://MainClick.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="DynamicFont" id=2]
-size = 64
-outline_size = 6
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
-
 [node name="MainClick" type="Node2D"]
-scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 4 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
@@ -36,7 +27,6 @@ hue_variation = 0.08
 hue_variation_random = 1.0
 
 [node name="Button" type="Button" parent="."]
-show_behind_parent = true
 margin_left = -46.6315
 margin_top = 22.0078
 margin_right = 765.369
@@ -50,24 +40,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 153.393, 478.424 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Label" type="Label" parent="Sprite"]
-margin_left = -184.0
-margin_top = -92.0
-margin_right = 184.0
-margin_bottom = 92.0
-custom_fonts/font = SubResource( 2 )
-text = "SIEAM
-		ENIU"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2( 130.419, 399.246 )
+amount = 64
+speed_scale = 0.52
+emission_shape = 2
+emission_rect_extents = Vector2( 64, 1 )
+radial_accel = 100.0
+radial_accel_random = 1.0
+tangential_accel_random = 0.38
+damping = 74.81
+damping_random = 0.39
+scale_amount = 5.0
+scale_amount_random = 1.0
+color = Color( 1, 0, 0, 1 )
+hue_variation = -0.12
+hue_variation_random = 0.87
 [connection signal="gui_input" from="Button" to="." method="_on_Button_gui_input"]

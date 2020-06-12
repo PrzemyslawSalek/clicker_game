@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/VCLdoNiebieskich.wav-f0d6d1b6a95788f67133c99153774eff.sample"
+
+[deps]
+
+source_file="res://sound/questions/VCLdoNiebieskich.wav"
+dest_files=[ "res://.import/VCLdoNiebieskich.wav-f0d6d1b6a95788f67133c99153774eff.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
