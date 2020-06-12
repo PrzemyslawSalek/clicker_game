@@ -1,4 +1,4 @@
-# clicker_game
+# Clicker game *"Hity Polskiego Internetu"*
 ## Game project for studies.
 
 The team of two handsome students undertakes to create a dream game of every Internet user in Poland.
